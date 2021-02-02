@@ -31,7 +31,7 @@ class DatabaseManager
 
         // make the connection to the database
         // $this->database = null;
-        $this->databaseName = "MVC";
+        $this->databaseName = "mvc";
         $dsn = "mysql:host=".$this->host.";dbname=".$this->databaseName.";port=".$this->port.";charset=".$this->charset;
         $options = [
             PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
@@ -43,7 +43,7 @@ class DatabaseManager
             $this->database = new PDO($dsn, $this->username, $this->password, $options);
             // $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             // return $pdo;
-        
+
         } catch (PDOException $e){
             echo "Connection failed: ".$e->getMessage();
         }

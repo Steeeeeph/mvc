@@ -27,7 +27,7 @@ $databaseManager->connect();
 // $url = $_SERVER["HTTP_REFERER"];
 // echo $url; // Outputs: Full URL
 
-function whatIsHappening() 
+/*function whatIsHappening()
 {
     echo '<h2>$_GET</h2>';
     var_dump($_GET);
@@ -41,4 +41,4 @@ function whatIsHappening()
     // echo '<h2>$_SESSION</h2>';
     // var_dump($_SESSION);
 }
-whatIsHappening();
+whatIsHappening();*/
