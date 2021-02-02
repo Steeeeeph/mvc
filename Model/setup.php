@@ -23,7 +23,7 @@ $databaseManager->connect();
 
 
 
-function whatIsHappening() 
+/*function whatIsHappening()
 {
     echo '<h2>$_GET</h2>';
     var_dump($_GET);
@@ -37,4 +37,8 @@ function whatIsHappening()
     // echo '<h2>$_SESSION</h2>';
     // var_dump($_SESSION);
 }
+<<<<<<< HEAD
 // whatIsHappening();
+=======
+whatIsHappening();*/
+>>>>>>> nour
