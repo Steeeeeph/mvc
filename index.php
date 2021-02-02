@@ -2,12 +2,9 @@
 
 //include all your model files here
 require 'Controller/setup.php';
-<<<<<<< HEAD:index.php
-// require 'Model/User.php';
-=======
+require 'Model/setup.php';
 include 'Controller/SigneController.php';
 require 'Model/User.php';
->>>>>>> nour:index.php
 
 //include all your controllers here
 
