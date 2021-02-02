@@ -20,12 +20,8 @@ $databaseManager->connect();
 // Load your view
 // Tip: you can load this dynamically and based on a variable, if you want to load another view
 
-// $BarbieInventory = new BarbieInventory($databaseManager);
 
 
-// // homepage directory assembly
-// $url = $_SERVER["HTTP_REFERER"];
-// echo $url; // Outputs: Full URL
 
 function whatIsHappening() 
 {
@@ -41,4 +37,4 @@ function whatIsHappening()
     // echo '<h2>$_SESSION</h2>';
     // var_dump($_SESSION);
 }
-whatIsHappening();
+// whatIsHappening();
