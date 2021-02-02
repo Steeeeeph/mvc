@@ -1,9 +1,8 @@
 <?php
 
 //include all your model files here
-require 'Model/setup.php';
+require 'Controller/setup.php';
 <<<<<<< HEAD:index.php
-require_once 'Model/config.php';
 // require 'Model/User.php';
 =======
 include 'Controller/SigneController.php';
@@ -12,8 +11,7 @@ require 'Model/User.php';
 
 //include all your controllers here
 
-require 'Controller/HomepageController.php';
-require 'Controller/InfoController.php';
+
 
 
 /**
