@@ -9,7 +9,7 @@ class Books
         $this->databaseManager = $databaseManager;
     }
 
-    public function createBook($isbn, $title, $author, $genre, $language, $pages, $published)
+    public function createBook(int $id, int $isbn, string $title, string $author, string $genre, string $language, int $pages, int $published)
     {
         $bookData =[
                     'isbn' => $isbn,
@@ -21,11 +21,18 @@ class Books
                     'published' => $published,
                 ];
         $sql= "INSERT INTO books (isbn, title, author, genre, language, pages, published)
-                VALUES (:isbn, :title, :author, :genre, :language, :pages, :published);
-                INSERT INTO book_collection (book_isbn)
-                VALUES (:isbn)"; //TODO insert user id as well
+                VALUES (:isbn, :title, :author, :genre, :language, :pages, :published);";
+        // $pdo_options[PDO::ATTR_EMULATE_PREPARES] = true;
         $this->databaseManager->database->prepare($sql)->execute($bookData);
 
+        $userBook =[
+            'user_id' => $id,
+            'isbn' => $isbn,
+        ];
+        $sql= "INSERT INTO book_collection (user_id, book_isbn)
+        VALUES (:user_id, :isbn);"; 
+        // $pdo_options[PDO::ATTR_EMULATE_PREPARES] = true;
+        $this->databaseManager->database->prepare($sql)->execute($userBook);
     }
 
     public function getCollection()

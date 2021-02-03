@@ -1,7 +1,6 @@
 <?php
 
 //include all your model files here
-require 'Controller/setup.php';
 require 'Model/setup.php';
 include 'Controller/SigneController.php';
 require 'Model/User.php';
