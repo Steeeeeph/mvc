@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7e306d7b-eafd-412a-8fdc-524e01129658" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Model/mvc.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controller/collectionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/collectionController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controller/setup.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/setup.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/Books.php" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Books.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/indexSVB.php" beforeDir="false" afterPath="$PROJECT_DIR$/indexSVB.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -14,7 +10,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/GoogleAPIclientSVB/composer.json</pharConfigPath>
     <execution />
   </component>
@@ -71,6 +67,8 @@
       <option name="presentableId" value="Default" />
       <updated>1612348152116</updated>
       <workItem from="1612348153282" duration="1105000" />
+      <workItem from="1612351244002" duration="3000" />
+      <workItem from="1612351319499" duration="660000" />
     </task>
     <servers />
   </component>
