@@ -2,48 +2,36 @@
 
 class Books
 {
+    private $databaseManager;
 
-    //TODO ADD books to your collection
-    //TODO search for books in api
-        //TODO validate the query
-        //TODO run the query in the api
-        //TODO get the data in json
-        //TODO click the book to add to your owned books
-
-
-    /**
-     * Google API client php
-    public $query;
-
-    function __construct (string $query)
+    public function __construct($databaseManager)
     {
-        $this->query = $query;
+        $this->databaseManager = $databaseManager;
     }
-    
-    require_once './vendor/autoload.php';
 
-    // instantiate the Google API Client
-    $client = new Google_Client();
-    $client->setApplicationName("MVC");
-    $client->setDeveloperKey($config['APIKeyBooks']);
+    public function createBook($isbn, $title, $author, $genre, $language, $pages, $published)
+    {
+        $bookData =[
+                    'isbn' => $isbn,
+                    'title' => $title,
+                    'author' => $author,
+                    'genre' => $genre,
+                    'language' => $language,
+                    'pages' => $pages,
+                    'published' => $published,
+                ];
+        $sql= "INSERT INTO books (isbn, title, author, genre, language, pages, published)
+                VALUES (:isbn, :title, :author, :genre, :language, :pages, :published);
+                INSERT INTO book_collection (book_isbn)
+                VALUES (:isbn)"; //TODO insert user id as well
+        $this->databaseManager->database->prepare($sql)->execute($bookData);
 
-    // get an instance of the Google Books client
-    $service = new Google_Service_Books($client);
-
-    // set options for your request
-    $optParams = [];
-
-    // make the API call to retrieve some search results
-    $results = $service->volumes->listVolumes($this->query, $optParams);
-
-    foreach ( $results as $item ) {
-        echo $item['volumeInfo']['title'], "<br /> \n";
-        echo '<a href="' . $item['volumeInfo']['previewLink'] . '">' . $item['volumeInfo']['previewLink'] . '</a>';
-        echo '<pre>';
-        // useful for debugging and checking which fields actually are in each item of the response
-        var_dump( $item );
-        echo '</pre>';
     }
-     */
+
+    public function getCollection()
+    {
+        $sql = "SELECT title, author, ";
+    }
+
 }
 
