@@ -18,6 +18,8 @@ require_once '../Model/Books.php';
 $databaseManager = new DatabaseManager($config['host'], $config['port'], $config['username'], $config['password']);
 $databaseManager->connect();
 
+$id = 1;
+
 $books = new Books($databaseManager);
 
 // Load your view
