@@ -38,14 +38,8 @@ class Books
     public function getCollection()
     {
         $sql = "SELECT * FROM book_collection JOIN books ON book_collection.book_isbn = books.isbn WHERE user_id = 1;";
-        ";
-        $statement = $this->databaseManager->database->execute($sql);
-
+        
+        $this->databaseManager->database->execute($sql);
     }
 
-
-
-
-
 }
-
