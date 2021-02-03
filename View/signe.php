@@ -9,132 +9,7 @@
     <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<<<<<<< HEAD
-<style>
-    body {
-        padding-top: 90px;
-    }
-    .panel-login {
-        border-color: #ccc;
-        -webkit-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
-        -moz-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
-        box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
-    }
-    .panel-login>.panel-heading {
-        color: #00415d;
-        background-color: #fff;
-        border-color: #fff;
-        text-align:center;
-    }
-    .panel-login>.panel-heading a{
-        text-decoration: none;
-        color: #666;
-        font-weight: bold;
-        font-size: 15px;
-        -webkit-transition: all 0.1s linear;
-        -moz-transition: all 0.1s linear;
-        transition: all 0.1s linear;
-    }
-    .panel-login>.panel-heading a.active{
-        color: #029f5b;
-        font-size: 18px;
-    }
-    .panel-login>.panel-heading hr{
-        margin-top: 10px;
-        margin-bottom: 0px;
-        clear: both;
-        border: 0;
-        height: 1px;
-        background-image: -webkit-linear-gradient(left,rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.15),rgba(0, 0, 0, 0));
-        background-image: -moz-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.15),rgba(0,0,0,0));
-        background-image: -ms-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.15),rgba(0,0,0,0));
-        background-image: -o-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.15),rgba(0,0,0,0));
-    }
-    .panel-login input[type="text"],.panel-login input[type="email"],.panel-login input[type="password"] {
-        height: 45px;
-        border: 1px solid #ddd;
-        font-size: 16px;
-        -webkit-transition: all 0.1s linear;
-        -moz-transition: all 0.1s linear;
-        transition: all 0.1s linear;
-    }
-    .panel-login input:hover,
-    .panel-login input:focus {
-        outline:none;
-        -webkit-box-shadow: none;
-        -moz-box-shadow: none;
-        box-shadow: none;
-        border-color: #ccc;
-    }
-    .btn-login {
-        background-color: #59B2E0;
-        outline: none;
-        color: #fff;
-        font-size: 14px;
-        height: auto;
-        font-weight: normal;
-        padding: 14px 0;
-        text-transform: uppercase;
-        border-color: #59B2E6;
-    }
-    .btn-login:hover,
-    .btn-login:focus {
-        color: #fff;
-        background-color: #53A3CD;
-        border-color: #53A3CD;
-    }
-    .forgot-password {
-        text-decoration: underline;
-        color: #888;
-    }
-    .forgot-password:hover,
-    .forgot-password:focus {
-        text-decoration: underline;
-        color: #666;
-    }
 
-    .btn-register {
-        background-color: #1CB94E;
-        outline: none;
-        color: #fff;
-        font-size: 14px;
-        height: auto;
-        font-weight: normal;
-        padding: 14px 0;
-        text-transform: uppercase;
-        border-color: #1CB94A;
-    }
-    .btn-register:hover,
-    .btn-register:focus {
-        color: #fff;
-        background-color: #1CA347;
-        border-color: #1CA347;
-    }
-
-    .error {color: #FF0000;}
-
-    #button {
-        background-color: #59B2E0;
-        outline: none;
-        color: #fff;
-        font-size: 14px;
-        height: auto;
-        font-weight: normal;
-        padding: 14px 0;
-        text-transform: uppercase;
-        border-color: #59B2E6;
-        line-height: 12px;
-        width: 70px;
-        margin-top: 1px;
-        margin-right: 2px;
-        position:absolute;
-        top:0;
-        right:0;
-        border-radius: 10px;
-        display: none;
-
-    }
-</style>
 </head>
 
 
@@ -270,7 +145,6 @@ if(isset($_SESSION['name'])){
     });
 
 </script>
-=======
     <script src="https://use.fontawesome.com/f92a08f756.js"></script>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -336,7 +210,6 @@ if(isset($_SESSION['name'])){
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
 
->>>>>>> Manten
 </body>
 
 </html>
