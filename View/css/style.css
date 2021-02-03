@@ -15,6 +15,27 @@
     min-width: 50px;
     text-align: center;
 }
+/* Navigation styling */
+.navcolor {
+    background: #EAE7DC;
+}
+.navlogo {
+width: 35px;
+height: auto;
+}
+.logolink {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.classlogoname{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: extra-light;
+    font-style: italic;
+    font-size: 34pt;
+    color: #e98074;
+    margin-left: 2vw;
+}
 
 /* Style the input fields */
 .input-field {
