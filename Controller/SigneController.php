@@ -5,6 +5,7 @@ declare(strict_types = 1);
 
 class SigneController
 {
+
     public function validate_email($email)
     {
         if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
@@ -149,7 +150,7 @@ class SigneController
 session_start();
 session_unset();
 session_destroy();
-header("location:../mvc/index.php");
+header("location:../mvc/indexSVB.php");
 
 
 

@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 class User
-{
+{   public $idUser;
     private $name;
     private $databaseManager;
 
@@ -35,9 +35,10 @@ class User
        /*session_start();*/
        $_SESSION['name']=$row['name'];
        $_SESSION['idUser']=$row['id'];
-       $idUser = $_SESSION['idUser'];
+       $this->idUser = $_SESSION['idUser'];
        $name=$_SESSION['name'];
-       echo"hello $name.your id is .$idUser";
+       echo"hello $name.your id is .$this->idUser";
+      header("location:indexSVB.php?page=collection");
 
       }
   }}

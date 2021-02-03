@@ -9,18 +9,18 @@ ini_set('display_startup_errors', '1');
 error_reporting(E_ALL);
 
 // Load secret config file
-require_once '../Model/config.php';
+require_once 'Model/config.php';
 
 //TODO require classes
-require_once '../Model/DatabaseManager.php';
-require_once '../Model/Books.php';
+require_once 'Model/DatabaseManager.php';
+require_once 'Model/Books.php';
 
 $databaseManager = new DatabaseManager($config['host'], $config['port'], $config['username'], $config['password']);
 $databaseManager->connect();
 
-$id = 1;
+/*$id = 1;
 
-$books = new Books($databaseManager);
+$books = new Books($databaseManager);*/
 
 // Load your view
 // Tip: you can load this dynamically and based on a variable, if you want to load another view
@@ -43,4 +43,4 @@ function whatIsHappening()
     // var_dump($_SESSION);
 }
 
-whatIsHappening();
+/*whatIsHappening();*/

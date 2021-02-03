@@ -2,9 +2,11 @@
 
 //include all your model files here
 require 'Controller/setup.php';
+include 'Controller/collectionController.php';
 include 'Controller/SigneController.php';
+
 require 'Model/User.php';
-require 'Model/config.php';
+
 //include all your controllers here
 
 
@@ -25,7 +27,13 @@ $controller->render($_GET, $_POST);
 //this file should never be more than 20 lines of code!
 session_start();
 
-$controller = new SigneController();
+
+
+
+if(isset($_GET['page']) && $_GET['page'] === 'collection') {
+    $controller = new collectionController();
+}else{
+    $controller = new SigneController();
+}
+
 $controller->render($_GET, $_POST);
-
-

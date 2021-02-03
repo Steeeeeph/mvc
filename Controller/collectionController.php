@@ -1,26 +1,40 @@
 <?php
 
-require_once 'setup.php';
 
+class collectionController
+{
 // TODO api: $books = new Books($_POST['search']);
-
-if (isset($_POST['submit'])) {
+    public function render(array $GET, array $POST){
+if (isset($_POST['submit']))
+{
     //TODO validate based on patterns?
-    if (!empty($_POST['isbn']) && !empty($_POST['author']) && !empty($_POST['genre']) && !empty($_POST['language']) && !empty($_POST['pages']) && !empty($_POST['published'])) {
-        $isbn = (int)$_POST['isbn'];
-        $title = $_POST['title'];
-        $author = $_POST['author'];
-        $genre = $_POST['genre'];
-        $language = $_POST['language'];
-        $pages = (int)$_POST['pages'];
-        $published = (int)$_POST['published'];
+    $databaseManager = new DatabaseManager("localhost", 3306, "root","");
+    $databaseManager->connect();
 
-        $books->createBook($id, $isbn, $title, $author, $genre, $language, $pages, $published);
 
-    } else {
-        return $php_errormsg;
 
-    }
+    $books = new Books($databaseManager);
+
+
+    if (!empty($_POST['isbn']) && !empty($_POST['author']) && !empty($_POST['genre']) && !empty($_POST['language']) && !empty($_POST['pages']) && !empty($_POST['published']))
+{
+$isbn = (int)$_POST['isbn'];
+$title = $_POST['title'];
+$author = $_POST['author'];
+$genre = $_POST['genre'];
+$language = $_POST['language'];
+$pages = (int)$_POST['pages'];
+$published = (int)$_POST['published'];
+$id=1;
+
+$books->createBook( $id,$isbn, $title, $author, $genre, $language, $pages, $published);
+
 }
 
-require '../View/collection.php';
+else {
+    return $php_errormsg;
+
+}
+}
+        require 'View/collection.php';
+}}
