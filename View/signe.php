@@ -150,10 +150,8 @@ if(isset($_SESSION['name'])){
             display: block;
         }</style>
     <?php
-    $books=$_SESSION['userBooks'];
-    $books1 = $_SESSION['loanedBooks'];
-     echo"$books";
-     echo"$books1";
+
+
 
 } ?>
 <form method="post">

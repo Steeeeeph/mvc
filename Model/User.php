@@ -34,10 +34,10 @@ class User
           echo"hello";
        /*session_start();*/
        $_SESSION['name']=$row['name'];
-       $_SESSION['userBooks'] = $row['in_bookshelf'];
-       $_SESSION['loanedBooks']=$row['loaned_book'];
+       $_SESSION['idUser']=$row['id'];
+       $idUser = $_SESSION['idUser'];
        $name=$_SESSION['name'];
-       echo"hello $name";
+       echo"hello $name.your id is .$idUser";
 
       }
   }}
