@@ -160,7 +160,7 @@ header("location:../mvc/index.php");
 
         //load the view
 
-        require 'View/signe.php';
+        require '../View/signe.php';
     }
 
 }

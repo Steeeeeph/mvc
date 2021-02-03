@@ -18,7 +18,7 @@ require_once '../Model/Books.php';
 $databaseManager = new DatabaseManager($config['host'], $config['port'], $config['username'], $config['password']);
 $databaseManager->connect();
 
-$id = 1;
+// $id = 1;
 
 $books = new Books($databaseManager);
 
@@ -34,7 +34,7 @@ function whatIsHappening()
     var_dump($_GET);
     echo '<h2>$_POST</h2>';
     var_dump($_POST);
-    echo "<pre>";
+    // echo "<pre>";
     // echo '<h2>$_SERVER</h2>';
     // var_dump($_SERVER);
     // echo "</pre>";
