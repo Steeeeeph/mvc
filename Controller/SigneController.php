@@ -1,5 +1,7 @@
 <?php
+
 declare(strict_types = 1);
+
 
 class SigneController
 {
@@ -31,6 +33,17 @@ class SigneController
     public function render(array $GET, array $POST)
 
     {
+        $userErr='';
+        $passwordErr='';
+        $phoneErr='';
+        $emailErr='';
+        $cityErr = '';
+        $userIdErr = '';
+        $passwordIdErr = '';
+
+
+
+        if (isset($_POST["submit"])) {
         $databaseManager = new DatabaseManager("localhost", 3306, "root","");
         $databaseManager->connect();
 
@@ -38,11 +51,26 @@ class SigneController
         $users = new User($databaseManager);
 
 
-        $name = $_POST['user'];
-        $email = $_POST['email'];
-        $password = $_POST['password'];
-        $city = $_POST['city'];
-        $phone = $_POST['phone'];
+            $name = $_POST['user'];
+
+
+            $email = $_POST['email'];
+
+
+            $password = $_POST['password'];
+
+
+
+            $phone = $_POST['phone'];
+
+
+            $city = $_POST['city'];
+
+
+
+
+
+
         $values = [
             $name,
             $email,
@@ -50,12 +78,8 @@ class SigneController
             $phone,
             $city,
             ];
-        $userErr='';
-         $passwordErr='';
-         $phoneErr='';
-         $emailErr='';
-         $cityErr = '';
-        if (isset($_POST["submit"])) {
+
+
         if (empty($_POST["user"]) || empty($_POST["city"]) || empty($_POST["phone"]) || empty($_POST["password"]) ||
             empty($_POST["email"]) || (!$this->validate_email($email)) || (!$this->validate_phone_number($phone))) {
             if (empty($_POST["email"])) {
@@ -78,12 +102,59 @@ class SigneController
             }
             if (empty($_POST["password"])) {
                 $passwordErr = "A password is required";
-            }}
+            }else{
+
+            }
+
+        }
         else{
-           $users->create($name,$email,$password,$phone,$city);
+            $hashedPwd= password_hash($password, PASSWORD_DEFAULT);
+           $users->create($name,$email,$hashedPwd,$phone,$city);
 
 
         }}
+
+        if (isset($_POST["login-submit"])) {
+
+
+            $databaseManager = new DatabaseManager("localhost", 3306, "root","");
+            $databaseManager->connect();
+
+
+            $users = new User($databaseManager);
+            $userId= $_POST['username'];
+            $passwordId= $_POST['passwordId'];
+            if(empty($userId) || empty($passwordId)){
+                if(empty($userId)){
+                    $userIdErr = "A user name or An email are required";
+                }
+               if( empty($passwordId)){
+                   $passwordIdErr = "A password is required";
+               }
+            }else{
+                $users->login($userId,$userId,$passwordId);
+
+
+
+
+
+            }
+
+
+
+        }
+
+        if (isset($_POST["log_out"])) {
+            echo"yes";
+session_start();
+session_unset();
+session_destroy();
+header("location:../mvc/index.php");
+
+
+
+
+        }
             //you should not echo anything inside your controller - only assign vars here
         // then the view will actually display them.
 
