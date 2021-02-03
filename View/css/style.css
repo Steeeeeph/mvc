@@ -1,4 +1,23 @@
+/* Font imports */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,900;1,200;1,900&display=swap');
+
+
 * {box-sizing: border-box;}
+
+
+
+
+/* Media queries responsiveness */
+@media (max-width: 992px) {
+
+}
+@media (max-width: 768px) {
+    
+}
+@media (max-width: 576px) {
+    
+}
+
 
 /* Style the input container */
 .input-container {
