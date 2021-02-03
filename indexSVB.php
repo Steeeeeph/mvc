@@ -24,5 +24,9 @@ $controller->render($_GET, $_POST);
 
 //you could write a simple IF here based on some $_GET or $_POST vars, to choose your controller
 //this file should never be more than 20 lines of code!
+session_start();
+
 $controller = new SigneController();
 $controller->render($_GET, $_POST);
+
+
